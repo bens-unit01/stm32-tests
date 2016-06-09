@@ -17,4 +17,5 @@ iar/*
 *.log
 *.bak
 *.ini
+*/MDK-ARM/keil-project/* 
 **/MDK-ARM/keil-project/* 
