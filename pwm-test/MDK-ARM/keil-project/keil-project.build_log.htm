@@ -3,50 +3,77 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Development\BLE\STM32\repo\pwm-test\MDK-ARM\keil-project.uvproj
-Project File Date:  05/20/2016
+C:\Development\BLE\STM32\repo\stm32-tests\pwm-test\MDK-ARM\keil-project.uvproj
+Project File Date:  06/15/2016
 
 <h2>Output:</h2>
-Rebuild target 'keil-project'
-compiling stm32f4xx_hal_rcc_ex.c...
-compiling stm32f4xx_hal_flash.c...
-compiling stm32f4xx_hal.c...
-compiling stm32f4xx_hal_flash_ex.c...
-compiling stm32f4xx_hal_cortex.c...
-compiling stm32f4xx_hal_flash_ramfunc.c...
-compiling stm32f4xx_hal_pwr_ex.c...
-compiling stm32f4xx_hal_pwr.c...
-compiling stm32f4xx_hal_tim_ex.c...
-compiling stm32f4xx_hal_rcc.c...
-compiling stm32f4xx_hal_dma.c...
-compiling stm32f4xx_hal_dma_ex.c...
-compiling stm32f4xx_hal_tim.c...
-compiling stm32f4xx_hal_gpio.c...
-compiling system_stm32f4xx.c...
-compiling stm32f4xx_it.c...
+Build target 'keil-project'
 compiling main.c...
-../Src/main.c(147): warning:  #223-D: function "memset" declared implicitly
-                memset(&gpio, 0, sizeof(gpio));
-../Src/main.c(169): warning:  #223-D: function "memset" declared implicitly
-        memset(&gpio, 0, sizeof(gpio));
-../Src/main.c(201): warning:  #223-D: function "memset" declared implicitly
-        memset(&oc, 0, sizeof(oc));
-../Src/main.c(219): warning:  #223-D: function "memset" declared implicitly
-        memset(htim, 0, sizeof(*htim));
-../Src/main.c(385): warning:  #177-D: function "MX_GPIO_Init" was declared but never referenced
-  void MX_GPIO_Init(void)
-../Src/main.c(258): warning:  #177-D: function "MX_TIM2_Init" was declared but never referenced
-  void MX_TIM2_Init(void)
-../Src/main.c(313): warning: C4017W: toggle may be used before being set
-                bool toggle;
-../Src/main.c: 7 warnings, 0 errors
-compiling stm32f4xx_hal_msp.c...
-assembling startup_stm32f407xx.s...
 linking...
-Program Size: Code=5002 RO-data=462 RW-data=12 ZI-data=1028  
-"keil-project\keil-project.axf" - 0 Error(s), 7 Warning(s).
+Program Size: Code=4736 RO-data=440 RW-data=8 ZI-data=1088  
+"keil-project\keil-project.axf" - 0 Error(s), 0 Warning(s).
 Load "keil-project\\keil-project.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
 Application running ...
+</pre>
+</body>
+</html>
+..
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_flash.c...
+compiling stm32f4xx_hal_flash_ex.c...
+compiling stm32f4xx_hal_dma.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal.c...
+compiling stm32f4xx_hal_pwr.c...
+assembling startup_stm32f407xx.s...
+compiling stm32f4xx_it.c...
+compiling stm32f4xx_hal_msp.c...
+compiling main.c...
+linking...
+Program Size: Code=4688 RO-data=440 RW-data=8 ZI-data=1088  
+"keil-project\keil-project.axf" - 0 Error(s), 0 Warning(s).
+Load "keil-project\\keil-project.axf" 
+Error: Flash Download failed  -  Target DLL has been cancelled
+Load "keil-project\\keil-project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "keil-project\\keil-project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+fier "IRQn_Type" is undefined
+  __STATIC_INLINE void NVIC_ClearPendingIRQ(IRQn_Type IRQn)
+../Drivers/CMSIS/Include/core_cm4.h(1685): error:  #20: identifier "IRQn_Type" is undefined
+  __STATIC_INLINE uint32_t NVIC_GetActive(IRQn_Type IRQn)
+../Drivers/CMSIS/Include/core_cm4.h(1698): error:  #20: identifier "IRQn_Type" is undefined
+  __STATIC_INLINE void NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
+../Drivers/CMSIS/Include/core_cm4.h(1720): error:  #20: identifier "IRQn_Type" is undefined
+  __STATIC_INLINE uint32_t NVIC_GetPriority(IRQn_Type IRQn)
+../Drivers/CMSIS/Include/core_cm4.h(1838): error:  #20: identifier "SysTick_IRQn" is undefined
+    NVIC_SetPriority (SysTick_IRQn, (1UL << __NVIC_PRIO_BITS) - 1UL); /* set Priority for Systick Interrupt */
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h(280): error:  #20: identifier "IRQn_Type" is undefined
+  void HAL_NVIC_SetPriority(IRQn_Type IRQn, uint32_t PreemptPriority, uint32_t SubPriority);
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h(281): error:  #20: identifier "IRQn_Type" is undefined
+  void HAL_NVIC_EnableIRQ(IRQn_Type IRQn);
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h(282): error:  #20: identifier "IRQn_Type" is undefined
+  void HAL_NVIC_DisableIRQ(IRQn_Type IRQn);
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h(297): error:  #20: identifier "IRQn_Type" is undefined
+  void HAL_NVIC_GetPriority(IRQn_Type IRQn, uint32_t PriorityGroup, uint32_t* pPreemptPriority, uint32_t* pSubPriority);
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h(298): error:  #20: identifier "IRQn_Type" is undefined
+  uint32_t HAL_NVIC_GetPendingIRQ(IRQn_Type IRQn);
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h(299): error:  #20: identifier "IRQn_Type" is undefined
+  void HAL_NVIC_SetPendingIRQ(IRQn_Type IRQn);
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h(300): error:  #20: identifier "IRQn_Type" is undefined
+  void HAL_NVIC_ClearPendingIRQ(IRQn_Type IRQn);
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h(301): error:  #20: identifier "IRQn_Type" is undefined
+  uint32_t HAL_NVIC_GetActive(IRQn_Type IRQn);
+../Src/main.c(140): error:  #20: identifier "SysTick_IRQn" is undefined
+    HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
+../Src/main.c: 1 warning, 20 errors
+"keil-project\keil-project.axf" - 20 Error(s), 1 Warning(s).
+Target not created
